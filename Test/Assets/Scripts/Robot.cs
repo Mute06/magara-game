@@ -9,6 +9,7 @@ public class Robot : MonoBehaviour
     public int health = 100;
     public Slider healthBar;
     public UnityEvent hitEffects;
+    [SerializeField] private UnityEvent OnDieEvent; 
 
 
 
@@ -16,6 +17,10 @@ public class Robot : MonoBehaviour
     {
         health += increasment;
         healthBar.value = health;
+        if (health <= 0)
+        {
+            OnDieEvent.Invoke();
+        }
     }
 
     #region Hits
