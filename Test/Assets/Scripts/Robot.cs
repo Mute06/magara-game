@@ -25,6 +25,7 @@ public class Robot : MonoBehaviour
         {
             UpdateHealth(-10);
             hitEffects.Invoke();
+            AudioManager.instance.PlaySound("explosion");
 
             
             
@@ -38,6 +39,7 @@ public class Robot : MonoBehaviour
         {
             UpdateHealth(-10);
             hitEffects.Invoke();
+            AudioManager.instance.PlaySound("explosion");
 
             LightController.instance.ChangeColorState(LightController.instance.currentState + 1);
             
@@ -50,9 +52,9 @@ public class Robot : MonoBehaviour
         {
             UpdateHealth(-10);
             hitEffects.Invoke();
+            AudioManager.instance.PlaySound("explosion");
 
-            
-            
+
             LightController.instance.ChangeColorState(LightController.instance.currentState + 1);
             
         }
@@ -64,11 +66,13 @@ public class Robot : MonoBehaviour
         {
             UpdateHealth(-10);
             hitEffects.Invoke();
-           
+            AudioManager.instance.PlaySound("explosion");
+
             LightController.instance.ChangeColorState(0);
             
 
         }
     }
+    
     #endregion
 }

@@ -6,23 +6,20 @@ public class OpenStuff : MonoBehaviour
 {
     public GameObject[] stuff;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public void OpenTheStuff()
     {
         foreach (var item in stuff)
         {
             item.SetActive(true);
+        }
+    }
+
+    public void CloseTheStuff()
+    {
+        foreach (var item in stuff)
+        {
+            item.SetActive(false);
         }
     }
 }

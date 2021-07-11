@@ -7,6 +7,8 @@ public class Button : MonoBehaviour, IDoor
 {
     [SerializeField] private UnityEvent onOpenEvent;
 
+    [SerializeField] private UnityEvent onCloseEvet;
+
     private Animator animator;
     private int isOpenHash;
     private void Start()
@@ -33,6 +35,7 @@ public class Button : MonoBehaviour, IDoor
         if (animator.GetBool(isOpenHash))
         {
             animator.SetBool(isOpenHash, false);
+            onCloseEvet.Invoke();
         }
         else
         {
