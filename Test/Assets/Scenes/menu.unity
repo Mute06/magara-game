@@ -1591,7 +1591,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1731329597}
-        m_TargetAssemblyTypeName: menu, Assembly-CSharp
+        m_TargetAssemblyTypeName: Menu, Assembly-CSharp
         m_MethodName: PlayGame
         m_Mode: 1
         m_Arguments:
@@ -1809,7 +1809,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1731329597}
-        m_TargetAssemblyTypeName: menu, Assembly-CSharp
+        m_TargetAssemblyTypeName: Menu, Assembly-CSharp
         m_MethodName: QuitGame
         m_Mode: 1
         m_Arguments:
@@ -2366,7 +2366,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1731329595}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a060eceed13174f499cf44b79fb76be4, type: 3}
+  m_Script: {fileID: 11500000, guid: 8f633516500a9b945b4fcbad8633fa06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1734527645 stripped
