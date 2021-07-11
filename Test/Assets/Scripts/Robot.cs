@@ -25,14 +25,11 @@ public class Robot : MonoBehaviour
         {
             UpdateHealth(-10);
             hitEffects.Invoke();
-            if (LightController.instance.currentState == LightController.ColorStates.Yellow)
-            {
-                LightController.instance.ChangeColorState(0);
-            }
-            else
-            {
-                LightController.instance.ChangeColorState(LightController.instance.currentState + 1);
-            }
+
+            
+            
+            LightController.instance.ChangeColorState(LightController.instance.currentState + 1);
+            
         }
     }
     public void HitRed()
@@ -41,14 +38,9 @@ public class Robot : MonoBehaviour
         {
             UpdateHealth(-10);
             hitEffects.Invoke();
-            if (LightController.instance.currentState == LightController.ColorStates.Yellow)
-            {
-                LightController.instance.ChangeColorState(0);
-            }
-            else
-            {
-                LightController.instance.ChangeColorState(LightController.instance.currentState + 1);
-            }
+
+            LightController.instance.ChangeColorState(LightController.instance.currentState + 1);
+            
         }
     }
 
@@ -58,14 +50,11 @@ public class Robot : MonoBehaviour
         {
             UpdateHealth(-10);
             hitEffects.Invoke();
-            if (LightController.instance.currentState == LightController.ColorStates.Yellow)
-            {
-                LightController.instance.ChangeColorState(0);
-            }
-            else
-            {
-                LightController.instance.ChangeColorState(LightController.instance.currentState + 1);
-            }
+
+            
+            
+            LightController.instance.ChangeColorState(LightController.instance.currentState + 1);
+            
         }
     }
 
@@ -75,14 +64,10 @@ public class Robot : MonoBehaviour
         {
             UpdateHealth(-10);
             hitEffects.Invoke();
-            if (LightController.instance.currentState == LightController.ColorStates.Yellow)
-            {
-                LightController.instance.ChangeColorState(0);
-            }
-            else
-            {
-                LightController.instance.ChangeColorState(LightController.instance.currentState + 1);
-            }
+           
+            LightController.instance.ChangeColorState(0);
+            
+
         }
     }
     #endregion

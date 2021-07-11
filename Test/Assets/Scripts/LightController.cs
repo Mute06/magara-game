@@ -50,7 +50,7 @@ public class LightController : MonoBehaviour
         {
             foreach (var item in lights)
             {
-                item.color = redColor;
+                item.color = greenColor;
             }
         }
         else if (nextState == ColorStates.Yellow)
