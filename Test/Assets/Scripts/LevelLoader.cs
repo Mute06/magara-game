@@ -7,6 +7,14 @@ public class LevelLoader : MonoBehaviour
 {
     public static LevelLoader instance;
 
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+    }
+
     public void LoadNextScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1 );
