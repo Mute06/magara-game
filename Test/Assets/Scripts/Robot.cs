@@ -9,9 +9,12 @@ public class Robot : MonoBehaviour
     public int health = 100;
     public Slider healthBar;
     public UnityEvent hitEffects;
-    [SerializeField] private UnityEvent OnDieEvent; 
+    [SerializeField] private UnityEvent OnDieEvent;
 
-
+    [SerializeField] private ParticleSystem red;
+    [SerializeField] private ParticleSystem blue;
+    [SerializeField] private ParticleSystem green;
+    [SerializeField] private ParticleSystem yellow;
 
     public void UpdateHealth(int increasment)
     {
@@ -21,6 +24,10 @@ public class Robot : MonoBehaviour
         {
             OnDieEvent.Invoke();
             AudioManager.instance.PlaySound("no");
+            blue.Play();
+            red.Play();
+            green.Play();
+            yellow.Play();
         }
     }
 
@@ -32,7 +39,7 @@ public class Robot : MonoBehaviour
             UpdateHealth(-10);
             hitEffects.Invoke();
             AudioManager.instance.PlaySound("explosion");
-
+            blue.Play();
             
             
             LightController.instance.ChangeColorState(LightController.instance.currentState + 1);
@@ -46,7 +53,7 @@ public class Robot : MonoBehaviour
             UpdateHealth(-10);
             hitEffects.Invoke();
             AudioManager.instance.PlaySound("explosion");
-
+            red.Play();
             LightController.instance.ChangeColorState(LightController.instance.currentState + 1);
             
         }
@@ -59,7 +66,7 @@ public class Robot : MonoBehaviour
             UpdateHealth(-10);
             hitEffects.Invoke();
             AudioManager.instance.PlaySound("explosion");
-
+            green.Play();
 
             LightController.instance.ChangeColorState(LightController.instance.currentState + 1);
             
@@ -73,7 +80,7 @@ public class Robot : MonoBehaviour
             UpdateHealth(-10);
             hitEffects.Invoke();
             AudioManager.instance.PlaySound("explosion");
-
+            yellow.Play();
             LightController.instance.ChangeColorState(0);
             
 
