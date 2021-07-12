@@ -339,8 +339,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 20, y: 0}
+  m_AnchoredPosition: {x: 6.6844788, y: 0}
+  m_SizeDelta: {x: 33.3689, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &192455454
 MonoBehaviour:
@@ -1050,6 +1050,7 @@ GameObject:
   m_Component:
   - component: {fileID: 491122496}
   - component: {fileID: 491122497}
+  - component: {fileID: 491122498}
   m_Layer: 5
   m_Name: Ses
   m_TagString: Untagged
@@ -1076,8 +1077,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 160, y: 20}
+  m_AnchoredPosition: {x: 0.0000076294, y: 435.5}
+  m_SizeDelta: {x: 342.6399, y: 38.5763}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &491122497
 MonoBehaviour:
@@ -1123,13 +1124,38 @@ MonoBehaviour:
   m_FillRect: {fileID: 424471410}
   m_HandleRect: {fileID: 192455453}
   m_Direction: 0
-  m_MinValue: 0
+  m_MinValue: 0.0001
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 491122498}
+        m_TargetAssemblyTypeName: SetVolume, Assembly-CSharp
+        m_MethodName: SetLevel
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &491122498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 491122495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf04a7997a04c964084b134f68d5a4fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mixer: {fileID: 24100000, guid: 87cc38fbc1722c246bb758b20965a57f, type: 2}
 --- !u!1 &528164873
 GameObject:
   m_ObjectHideFlags: 0
@@ -1557,7 +1583,7 @@ AudioSource:
   m_GameObject: {fileID: 709734139}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 87cc38fbc1722c246bb758b20965a57f, type: 2}
   m_audioClip: {fileID: 8300000, guid: 41c30371244903d41809b05d726bd536, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -1664,7 +1690,7 @@ Terrain:
   m_GameObject: {fileID: 709734139}
   m_Enabled: 1
   serializedVersion: 6
-  m_TerrainData: {fileID: 15600000, guid: 04fe7218ae884d9429e14011bbe63572, type: 2}
+  m_TerrainData: {fileID: 0}
   m_TreeDistance: 5000
   m_TreeBillboardDistance: 50
   m_TreeCrossFadeLength: 5
