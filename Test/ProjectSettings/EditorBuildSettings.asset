@@ -14,5 +14,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Sci-Fi Styled Modular Pack/Example scenes/Yedek Level2.unity
     guid: 5ab047b9b9b0dd94f831aea99eb68eb4
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: 1b7cf020984f6d74198c02768c86b265
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 9e7be553448fa2546aea5752021cbcf7, type: 2}
