@@ -20,6 +20,7 @@ public class Robot : MonoBehaviour
         if (health <= 0)
         {
             OnDieEvent.Invoke();
+            AudioManager.instance.PlaySound("no");
         }
     }
 
